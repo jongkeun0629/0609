@@ -1,31 +1,20 @@
 public class Main {
-    public static int add(int a, int b){
-        return a + b;
-    }
-
-    public static int add(int a, int b, int c){
-        return a + b + c;
-    }
-
-
-    public static void greet(){
-        System.out.println("Hello, World!");
-    }
-
-    public static void greet(String name){
-        System.out.println("Hello, " + name + "!");
-    }
-
-    public static void greet(String name, int age){
-        System.out.println("Hello, " + name + ". age is " + age);
-    }
-
     public static void main(String[] args){
-        System.out.println("a + b = " + add(1, 2));
-        System.out.println("a + b + c = " + add(1,2,3));
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7};
 
-        greet();
-        greet("Alice");
-        greet("Bob", 25);
+        System.out.println(numbers.length);
+
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[i]);
+        }
+
+        // 역순
+        for(int i = numbers.length - 1; i >= 0; i--){
+            System.out.println(numbers[i]);
+        }
+
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[numbers.length - i - 1]);
+        }
     }
 }
