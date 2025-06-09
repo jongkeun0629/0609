@@ -1,12 +1,23 @@
 public class Main {
     public static void main(String[] args){
-        int[] numbers = {2, 4, 6, 8, 10};
-        int sum = 0;
+        String message = "Hello, Java!!";
 
-        for (int i = 0; i < numbers.length; i++){
-            sum += numbers[i];
+        System.out.println(message);
+
+        System.out.println(message.length());
+
+        System.out.println(message.toUpperCase());
+        System.out.println(message.toLowerCase());
+
+        System.out.println(message.indexOf("l"));
+
+        // indexOf() 로직 구현
+        for (int i = 0; i < message.length(); i++){
+            if (message.charAt(i) == 'l'){
+                System.out.println(i);
+                break;
+            }
         }
-
-        System.out.println(sum);
+        System.out.println(message.substring(3,6));
     }
 }
